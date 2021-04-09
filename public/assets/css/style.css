@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root {
+  --color1: #721616;
+  --color2: #000000;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color:#fff;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(121deg, var(--color1),var(--color2));
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+  transition: all 1s ease-out;  
+}
+.container {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 10px 0 50px 0;
+  height: auto;
+  width: 80%;
+  max-width: 800px;
+
+}
+.title h1 {
+  font-size: 3rem;
+}
+.title .icon {
+  font-size: 3rem;
+  margin: 11px 0 0 15px;
+
+}
+
+.drag-area{
+  height: auto;
+  width: 93%;
+  max-width: 800px;
+  box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), -8px -8px 12px 0 rgb(255 255 255 / 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area canvas {
+
+  width: 100% !important;
+  height: auto !important;
+  max-height: 550px !important;
+}
+
+.scale {
+  transform: scale(1);
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  margin: 10px 0 0 0;
+
+}
+.footer a {
+  text-decoration: none;
+}
+.footer span {
+  font-size: 0.9rem;
+  animation-duration: 3s;
+  /* animation-name: slidein; */
+}
+.footer-icon {
+  font-size: 30px;
+  margin: 0 0 0 9px;
+  animation-duration: 3s;
+  text-shadow: rgb(0 0 0 / 25%) 5px 4px 4px;
+
+  /* animation-name: slideinIcon; */
+}
+.footer-year {
+  text-shadow: rgb(0 0 0 / 25%) 5px 4px 4px;
+
+}
+.lilcode {
+  animation: rotation 2s infinite linear;
+  font-weight: 700;
+  text-shadow: rgb(0 0 0 / 25%) 5px 4px 4px;
+
+}
+
+.lilcode:hover {
+  font-size: 1.2rem;
+  transition: all 1s ease;
+}
+.lilcode:not( :hover ){
+  font-size: 0.9rem;
+  transition: all 1s ease;
+  
+}
+
+@media screen and (max-width: 585px) { 
+  .title h1 {
+    font-size: 2rem;
+  }
+  .title .icon {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 395px) {
+  .title {
+    margin: 10px 0 35px 0;
+  }
+  .title h1 {
+    font-size: 1.6rem;
+  }
+  .title .icon {
+    font-size: 2rem;
+    margin:5px 0 10px 10px;
+
+  }
+  .lilcode:hover {
+    font-size: 1rem;
+    transition: all 1s ease;
+  }
+  .lilcode:not( :hover ){
+    font-size: 0.9rem;
+    transition: all 1s ease;
+    
+  }
+}
+@media screen and (max-width: 355px) {
+
+  .title h1 {
+    font-size: 1.5rem;
+    margin: 8px 0 0 0;
+  }
+  .title .icon {
+    font-size: 1.5rem;
+    margin: 17px 0 10px 10px;
+
+  }
+
+}
+
+@media screen and (max-width: 294px) {
+  .title h1 {
+    font-size: 1.2rem;
+    margin: 8px 0 0 0;
+  }
+  .title .icon {
+    font-size: 1.2rem;
+    margin: 11px 0 0 10px;
+
+  }
+}
+@media screen and (max-width: 238px) {
+  .title h1 {
+    font-size: 1rem;
+    margin: 8px 0 0 0;
+  }
+  .title .icon {
+    font-size: 1.2rem;
+    margin: 11px 0 0 5px;
+
+  }
+}
